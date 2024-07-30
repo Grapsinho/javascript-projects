@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do App</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .filter-buttons {
+      margin-bottom: 1rem;
+    }
+    .filter-buttons .btn {
+      margin-right: 0.5rem;
+    }
+  </style>
+
+  <link rel="shortcut icon" href="task-image.png" type="image/x-icon">
+</head>
+<body>
+
+<section class="vh-100" style="background-color: #121212;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100" style="overflow-y: scroll;">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card rounded-3 shadow" style="background-color: #c9c9c9; box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;">
+          <div class="card-body p-4">
+
+            <h4 class="text-center my-3 pb-3">To Do App</h4>
+
+            <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center mb-4 pb-2">
+              <div class="col-12">
+                <div class="form-outline">
+                  <input type="text" id="form1" class="form-control" />
+                  <label class="form-label" for="form1">Enter a task here</label>
+                </div>
+              </div>
+
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary saveTskBtn">Save Task</button>
+                  </div>
+    
+            </form>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center">
+              <button class="btn btn-secondary allFilter">All</button>
+              <button class="btn btn-info progFilter">In Progress</button>
+              <button class="btn btn-success compFilter">Completed</button>
+            </div>
+
+            <table class="table mb-4">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Todo item</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="taskList">
+              </tbody>
+            </table>
+
+            <p class="noNewTasks">No new tasks for now.</p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script type="module" src="./scripts.js"></script>
+</body>
+</html>
